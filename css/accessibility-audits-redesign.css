@@ -1,0 +1,1098 @@
+/* ================================================
+   ACCESSIBILITY AUDITS PAGE SPECIFIC STYLES
+   Unique selectors that complement existing website design
+   Consistent with redesign.css design system for all pages
+   ================================================ */
+
+/* Use consistent website color scheme */
+:root {
+  --primary-green: #D4A574;
+  --accent-orange: #F4B03E;
+  --dark-text: #1A1A1A;
+  --soft-gray: #FAFAFA;
+  --deep-green: #E6B887;
+  --white: #FFFFFF;
+  --light-green: #F5F3ED;
+  --border-light: #EEEEEE;
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --border-radius: 8px;
+  --border-radius-small: 6px;
+  --transition: all 0.3s ease;
+}
+
+/* Hero Section - Optimized for 4-card trust display */
+.audit-page-hero {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #F8F6F0 0%, #F5F3ED 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(244, 176, 62, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.audit-page-hero .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.audit-page-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.audit-page-hero-text {
+  max-width: 100%;
+}
+
+.audit-page-hero-badge {
+  display: inline-block;
+  background: var(--primary-green);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-light);
+}
+
+.audit-page-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.audit-page-hero-text p {
+  font-size: 1.125rem;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.audit-page-hero-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.audit-page-btn-primary,
+.audit-page-btn-secondary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+  min-width: 180px;
+}
+
+.audit-page-btn-primary {
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+}
+
+.audit-page-btn-primary:hover {
+  background: var(--deep-green);
+  border-color: var(--deep-green);
+  transform: translateY(-2px);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.audit-page-btn-secondary {
+  background: transparent;
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.audit-page-btn-secondary:hover {
+  background: var(--primary-green);
+  color: var(--white);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.audit-page-hero-trust {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.audit-page-trust-item {
+  text-align: center;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.audit-page-trust-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-green);
+}
+
+.audit-page-trust-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.audit-page-trust-label {
+  font-size: 0.875rem;
+  color: rgba(26, 26, 26, 0.7);
+  font-weight: 500;
+}
+
+.audit-page-hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.audit-page-hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+}
+
+.audit-page-floating-badge {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  text-align: center;
+  z-index: 10;
+}
+
+.audit-page-floating-badge .number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  display: block;
+}
+
+.audit-page-floating-badge .label {
+  font-size: 0.75rem;
+  color: var(--dark-text);
+}
+
+/* Service Overview Section */
+.audit-page-overview {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.audit-page-overview .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.audit-page-section-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.audit-page-section-badge {
+  display: inline-block;
+  background: var(--accent-orange);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-light);
+}
+
+.audit-page-section-intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.audit-page-section-intro p {
+  font-size: 1.125rem;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.audit-page-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.audit-page-overview-card {
+  background: var(--white);
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.audit-page-overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-green);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+.audit-page-overview-card:hover::before {
+  transform: scaleX(1);
+}
+
+.audit-page-overview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-green);
+}
+
+.audit-page-overview-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.audit-page-overview-card:hover .audit-page-overview-icon {
+  background: var(--accent-orange);
+  transform: scale(1.1);
+}
+
+.audit-page-overview-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.audit-page-overview-card p {
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Government Recognition Section */
+.audit-page-government {
+  padding: 5rem 0;
+  background: var(--soft-gray);
+}
+
+.audit-page-government .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.audit-page-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.audit-page-partner-item {
+  text-align: center;
+  background: var(--white);
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-page-partner-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-orange);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+.audit-page-partner-item:hover::before {
+  transform: scaleX(1);
+}
+
+.audit-page-partner-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-green);
+}
+
+.audit-page-partner-logo {
+  margin-bottom: 1.5rem;
+}
+
+.audit-page-logo-placeholder {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--white);
+  border: 2px solid var(--white);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.audit-page-partner-item:hover .audit-page-logo-placeholder {
+  background: var(--accent-orange);
+  transform: scale(1.1);
+}
+
+.audit-page-partner-item h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.audit-page-partner-item p {
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Audit Process Section */
+.audit-page-process {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.audit-page-process .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.audit-page-process-timeline {
+  margin-top: 3rem;
+}
+
+.audit-page-process-step {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.audit-page-process-step.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.audit-page-process-step.reverse {
+  direction: rtl;
+}
+
+.audit-page-process-step.reverse > * {
+  direction: ltr;
+}
+
+.audit-page-step-number {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: var(--shadow-light);
+  position: relative;
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.audit-page-process-step:hover .audit-page-step-number {
+  background: var(--accent-orange);
+  transform: scale(1.1);
+}
+
+.audit-page-step-content {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  position: relative;
+  transition: var(--transition);
+}
+
+.audit-page-step-content:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-5px);
+}
+
+.audit-page-step-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.audit-page-step-content p {
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.audit-page-step-duration {
+  background: rgba(0, 122, 92, 0.1);
+  color: var(--primary-green);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-small);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid rgba(0, 122, 92, 0.2);
+}
+
+.audit-page-step-image {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+}
+
+.audit-page-step-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.audit-page-step-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Parameters Section */
+.audit-page-parameters {
+  padding: 5rem 0;
+  background: var(--soft-gray);
+}
+
+.audit-page-parameters .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.audit-page-parameters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.audit-page-parameter-category {
+  background: var(--white);
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.audit-page-parameter-category:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-green);
+}
+
+.audit-page-parameter-category h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(0, 122, 92, 0.1);
+}
+
+.audit-page-parameter-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.audit-page-parameter-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: rgba(0, 122, 92, 0.03);
+  border-radius: var(--border-radius-small);
+  border: 1px solid rgba(0, 122, 92, 0.1);
+  transition: var(--transition);
+}
+
+.audit-page-parameter-item:hover {
+  background: rgba(0, 122, 92, 0.08);
+  transform: translateX(5px);
+}
+
+.audit-page-parameter-item i {
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  width: 20px;
+  text-align: center;
+}
+
+.audit-page-parameter-item span {
+  color: rgba(26, 26, 26, 0.8);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Benefits Section */
+.audit-page-benefits {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.audit-page-benefits .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.audit-page-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.audit-page-benefit-card {
+  text-align: center;
+  background: var(--white);
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-page-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-orange);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+.audit-page-benefit-card:hover::before {
+  transform: scaleX(1);
+}
+
+.audit-page-benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-green);
+}
+
+.audit-page-benefit-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.audit-page-benefit-card:hover .audit-page-benefit-icon {
+  background: var(--accent-orange);
+  transform: scale(1.1);
+}
+
+.audit-page-benefit-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.audit-page-benefit-card p {
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Testimonials Section */
+.audit-page-testimonials {
+  padding: 5rem 0;
+  background: var(--soft-gray);
+}
+
+.audit-page-testimonials .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.audit-page-testimonials-carousel {
+  margin-top: 3rem;
+}
+
+.audit-page-testimonial-item {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-light);
+  margin: 1rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.audit-page-testimonial-item:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-5px);
+}
+
+.audit-page-testimonial-content {
+  margin-bottom: 2rem;
+}
+
+.audit-page-quote-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-light);
+}
+
+.audit-page-testimonial-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(26, 26, 26, 0.8);
+  font-style: italic;
+  margin: 0;
+}
+
+.audit-page-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.audit-page-author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--primary-green);
+}
+
+.audit-page-author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.audit-page-author-info h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 0.25rem;
+}
+
+.audit-page-author-info p {
+  color: var(--primary-green);
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Call to Action Section */
+.audit-page-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-orange) 50%, var(--primary-green) 100%);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-page-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.audit-page-cta .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.audit-page-cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.audit-page-cta-content p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.audit-page-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.audit-page-cta-guarantee {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.audit-page-guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.audit-page-guarantee-item i {
+  color: #F4B03E;
+  font-size: 1.125rem;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 1024px) {
+  .audit-page-hero-content {
+    gap: 3rem;
+  }
+  
+  .audit-page-process-step {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .audit-page-process-step.reverse {
+    direction: ltr;
+  }
+  
+  .audit-page-cta-guarantee {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .audit-page-hero {
+    padding: 4rem 0;
+  }
+  
+  .audit-page-hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .audit-page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .audit-page-hero-cta {
+    justify-content: center;
+  }
+  
+  .audit-page-hero-trust {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .audit-page-trust-item {
+    padding: 1rem;
+  }
+  
+  .audit-page-trust-number {
+    font-size: 1.5rem;
+  }
+  
+  .audit-page-section-intro h2 {
+    font-size: 1.75rem;
+  }
+  
+  .audit-page-overview-grid,
+  .audit-page-partners-grid,
+  .audit-page-parameters-grid,
+  .audit-page-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .audit-page-overview-card,
+  .audit-page-partner-item,
+  .audit-page-parameter-category,
+  .audit-page-benefit-card {
+    padding: 1.5rem;
+  }
+  
+  .audit-page-overview-icon,
+  .audit-page-benefit-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  .audit-page-process-step {
+    margin-bottom: 2rem;
+  }
+  
+  .audit-page-step-content {
+    padding: 1.5rem;
+  }
+  
+  .audit-page-step-image {
+    order: -1;
+  }
+  
+  .audit-page-cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .audit-page-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .audit-page-cta-guarantee {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .audit-page-testimonial-item {
+    padding: 2rem;
+  }
+  
+  .audit-page-testimonial-author {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .audit-page-hero,
+  .audit-page-overview,
+  .audit-page-government,
+  .audit-page-process,
+  .audit-page-parameters,
+  .audit-page-benefits,
+  .audit-page-testimonials,
+  .audit-page-cta {
+    padding: 3rem 0;
+  }
+  
+  .audit-page-hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .audit-page-hero-text p {
+    font-size: 1rem;
+  }
+  
+  .audit-page-hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .audit-page-btn-primary,
+  .audit-page-btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .audit-page-hero-trust {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .audit-page-section-intro h2 {
+    font-size: 1.5rem;
+  }
+  
+  .audit-page-section-intro p {
+    font-size: 1rem;
+  }
+  
+  .audit-page-overview-grid,
+  .audit-page-partners-grid,
+  .audit-page-parameters-grid,
+  .audit-page-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .audit-page-overview-card,
+  .audit-page-partner-item,
+  .audit-page-parameter-category,
+  .audit-page-benefit-card {
+    padding: 1.5rem;
+  }
+  
+  .audit-page-step-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.125rem;
+  }
+  
+  .audit-page-step-content {
+    padding: 1.5rem;
+  }
+  
+  .audit-page-step-image img {
+    height: 150px;
+  }
+  
+  .audit-page-cta-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .audit-page-cta-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .audit-page-testimonial-item {
+    padding: 1.5rem;
+  }
+  
+  .audit-page-testimonial-content p {
+    font-size: 1rem;
+  }
+  
+  .audit-page-author-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .audit-page-author-info h4 {
+    font-size: 1rem;
+  }
+}
