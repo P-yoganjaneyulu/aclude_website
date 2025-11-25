@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Donate & Support - Accessibility Solutions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+      <link rel="stylesheet" href="css/navbar.css">
+  </head>
+  <body>
+    <!-- Include Navbar -->
+    <div id="navbar-container">
+      <!-- Navbar will be loaded here by JavaScript -->
+    </div>
+    
+    <script>
+      // Load navbar content
+      fetch('partials/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+          // Set active state for current page
+          const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+          document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+              link.classList.add('active');
+              link.closest('.nav-item').classList.add('active');
+            }
+          });
+          
+          // Set active state for dropdown items
+          document.querySelectorAll('.dropdown-item').forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+              item.classList.add('active');
+              const parentDropdown = item.closest('.dropdown');
+              if (parentDropdown) {
+                const toggle = parentDropdown.querySelector('.dropdown-toggle');
+                if (toggle) toggle.classList.add('active');
+              }
+            }
+          });
+        });
+    </script>
+    
+  
+  <!-- END nav -->
+  
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+              <h2 class="heading">Support Accessibility</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="site-section fund-raisers">
+    <div class="container">
+      <div class="row mb-3 justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2>Make a Difference</h2>
+          <p class="lead">Your support helps us create accessible spaces for everyone. Every contribution counts towards building an inclusive society.</p>
+          <p class="mb-5"><a href="csr-community.html" class="link-underline">Learn About Our CSR Projects</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/person_1.jpg" alt="CSR Partner" class="img-fluid">
+            <div class="donate-info">
+              <h2>Corporate CSR</h2>
+              <span class="time d-block mb-3">Partner with us</span>
+              <p>Support <span class="text-success">₹5,00,000</span> <br> <em>for</em> <a href="csr-community.html" class="link-underline fundraise-item">School Accessibility Project</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/person_2.jpg" alt="Individual Donor" class="img-fluid">
+            <div class="donate-info">
+              <h2>Individual Support</h2>
+              <span class="time d-block mb-3">Make an impact</span>
+              <p>Support <span class="text-success">₹10,000</span> <br> <em>for</em> <a href="home-accessibility.html" class="link-underline fundraise-item">Home Accessibility Kit</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/person_3.jpg" alt="Community Project" class="img-fluid">
+            <div class="donate-info">
+              <h2>Community Projects</h2>
+              <span class="time d-block mb-3">Join the movement</span>
+              <p>Support <span class="text-success">₹2,50,000</span> <br> <em>for</em> <a href="projects.html" class="link-underline fundraise-item">Public Park Accessibility</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/person_4.jpg" alt="Training Program" class="img-fluid">
+            <div class="donate-info">
+              <h2>Training Programs</h2>
+              <span class="time d-block mb-3">Empower others</span>
+              <p>Support <span class="text-success">₹50,000</span> <br> <em>for</em> <a href="expert-sessions.html" class="link-underline fundraise-item">Accessibility Training</a></p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/img_1.jpg" alt="Government Partnership" class="img-fluid">
+            <div class="donate-info">
+              <h2>Government Projects</h2>
+              <span class="time d-block mb-3">Scale up impact</span>
+              <p>Support <span class="text-success">₹10,00,000</span> <br> <em>for</em> <a href="projects.html" class="link-underline fundraise-item">Metro Station Accessibility</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/img_2.jpg" alt="Healthcare Accessibility" class="img-fluid">
+            <div class="donate-info">
+              <h2>Healthcare Access</h2>
+              <span class="time d-block mb-3">Save lives</span>
+              <p>Support <span class="text-success">₹7,50,000</span> <br> <em>for</em> <a href="projects.html" class="link-underline fundraise-item">Hospital Accessibility</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/img_3.jpg" alt="Educational Access" class="img-fluid">
+            <div class="donate-info">
+              <h2>Educational Access</h2>
+              <span class="time d-block mb-3">Build futures</span>
+              <p>Support <span class="text-success">₹3,00,000</span> <br> <em>for</em> <a href="projects.html" class="link-underline fundraise-item">University Accessibility</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-5">
+          <div class="person-donate text-center">
+            <img src="images/img_4.jpg" alt="Community Centers" class="img-fluid">
+            <div class="donate-info">
+              <h2>Community Centers</h2>
+              <span class="time d-block mb-3">Strengthen communities</span>
+              <p>Support <span class="text-success">₹1,50,000</span> <br> <em>for</em> <a href="csr-community.html" class="link-underline fundraise-item">Community Center Accessibility</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div> <!-- .section -->
+
+  <div class="featured-section overlay-color-2" style="background-image: url('images/bg_2.jpg');">
+    
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 mb-5 mb-md-0">
+          <img src="images/bg_2.jpg" alt="CSR Partnership" class="img-fluid">
+        </div>
+
+        <div class="col-md-6 pl-md-5">
+
+          <div class="form-volunteer">
+            
+            <h2>Partner With Us</h2>
+            <form action="#" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control py-2" id="name" placeholder="Organization Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control py-2" id="email" placeholder="Contact Email">
+              </div>
+              <div class="form-group">
+                <select class="form-control py-2" id="interest">
+                  <option value="">Select Interest</option>
+                  <option value="csr">CSR Partnership</option>
+                  <option value="donation">Individual Donation</option>
+                  <option value="volunteer">Volunteer</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea name="v_message" id="" cols="30" rows="3" class="form-control py-2" placeholder="Tell us how you'd like to contribute"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-white px-5 py-2" value="Send Message">
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div> <!-- .featured-donate -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">We make places accessible. Our mission is to ensure equal access for every person, everywhere.</p>
+          <p class="mb-5">From audits and design to construction and training, we provide holistic, end-to-end accessibility solutions tailored to each space.</p>
+          <p><a href="about.html" class="link-underline">Read More</a></p>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Latest Posts</h3>
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_1.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Corporate Social Responsibility</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> August 22, 2024</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 8</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_2.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Home Accessibility Solutions</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> September 10, 2024</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 15</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_3.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Government Accessibility Initiatives</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> September 28, 2024</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 12</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="block-23">
+            <h3 class="heading-section">Get Connected</h3>
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Thoothukudi & Chennai, India</span></li>
+                <li><a href="contact.html"><span class="icon icon-phone"></span><span class="text">Contact Us</span></a></li>
+                <li><a href="contact.html"><span class="icon icon-envelope"></span><span class="text">info@accessibilitysolutions.com</span></a></li>
+              </ul>
+            </div>
+        </div>
+        
+        
+      </div>
+      <div class="row pt-5">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Accessibility Solutions. All rights reserved.
+            </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+  
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
