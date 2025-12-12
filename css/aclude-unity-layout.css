@@ -1497,40 +1497,56 @@ p {
 /* Impact Statistics */
 .impact-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-bottom: 5rem;
-  padding: 0 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 0 0 5rem auto;
+  width: 90%;
+  max-width: 1000px;
+  padding: 0 2rem 0 0;
+  margin-left: auto;
+  margin-right: 2rem;
+  justify-content: flex-end;
 }
 
 .stat-item {
   text-align: center;
   background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 122, 92, 0.1);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 220px;
+  margin-left: auto;
 }
 
 .stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 122, 92, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 122, 92, 0.12);
   border-color: var(--primary-green);
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--primary-green);
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .stat-label {
-  font-size: 0.9375rem;
-  color: rgba(26, 26, 26, 0.7);
+  font-size: 0.875rem;
+  color: rgba(26, 26, 26, 0.8);
   font-weight: 500;
+  line-height: 1.4;
+  max-width: 120px;
+  margin: 0 auto;
 }
 
 /* Community Stories */
@@ -8827,6 +8843,10 @@ p {
   background: white;
   border-radius: 20px;
   overflow: hidden;
+  /* fixed compact height requested by user */
+  height: 300px;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.4s ease;
@@ -8840,8 +8860,8 @@ p {
 
 .project-image {
   position: relative;
-  /* reduced image height to decrease overall project-card height */
-  height: 180px;
+  /* further reduced image height to decrease overall project-card height */
+  height: 150px;
   overflow: hidden;
 }
 
@@ -8903,8 +8923,11 @@ p {
 
 .project-info {
   /* reduced padding to make project info containers smaller */
-  padding: 1.25rem;
+  padding: 1rem;
   width:100%;
+  /* allow project info to take remaining space and scroll if content overflows */
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .project-category {
@@ -8932,11 +8955,11 @@ p {
 
 .project-info h3 {
   /* slightly smaller heading to match reduced container size */
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
+  margin-bottom: 1rem;
+  line-height: 1.25;
 }
 
 .project-info p {
@@ -9026,11 +9049,13 @@ p {
    =============================== */
 
 .project-stats-section {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, #d4a57440 0%, #d4a57440 100%);
+  padding: 6rem 2rem 8rem;
+  background: #d4a574;
   color: white;
   position: relative;
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto 6rem;
 }
 
 .project-stats-section::before {
@@ -9050,6 +9075,8 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
@@ -9091,7 +9118,7 @@ p {
 
 .cta-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #F8F6F0 0%, #F5F3ED 100%);
   color: white;
   text-align: center;
   position: relative;
@@ -9130,7 +9157,7 @@ p {
 
 .cta-content p {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #0c0d19;
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -9252,7 +9279,7 @@ p {
   
   .project-image {
     /* smaller mobile image height for compact layout */
-    height: 150px;
+    height: 130px;
   }
   
   .filter-tabs {
